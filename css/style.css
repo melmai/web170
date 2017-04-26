@@ -156,6 +156,16 @@ i.fa {
     display: block;
 }
 
+section > .icon-box > i.fa {
+    color: rgb(131, 194, 184);
+    font-size: 7em;
+}
+
+section > .icon-box {
+    margin: 20px auto 10px;
+    width: 40%;
+}
+
 .button {
     margin: 20px auto 0;
     padding: 2% 1.5%;
