@@ -14,7 +14,7 @@ Version: 1.0
 }
 
 html {
-    background: url(../images/shoes-med.jpg) no-repeat center center fixed;
+    background: url(images/shoes-med.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -23,7 +23,6 @@ html {
 
 header {
     width: 100vw;
-    overflow: hidden;
     height: 80px;
     line-height: 80px;
     position: fixed;
@@ -43,6 +42,11 @@ header {
 #logo {
     padding-left: 3%;
     flex-basis: 1;
+}
+
+#logo a {
+    text-decoration: none;
+    color: #fff;
 }
 
 nav {
@@ -83,20 +87,19 @@ nav li:nth-child(5) {
     background-color: #F36156;
 }
 
-header > .social {
+header>.social {
     width: 20%;
     margin-right: 2%;
-    }
+}
 
 .social ul {
     list-style-type: none;
     display: inline;
 }
 
-header > .social li {
+header>.social li {
     float: right;
     padding: 0 2%;
-
 }
 
 .social li a {
@@ -115,7 +118,6 @@ i.fa {
     display: inline;
     color: #fff;
 }
-
 
 
 /* ++++++++++++++ END HEADER STYLES ++++++++++++++++ */
@@ -164,14 +166,14 @@ i.fa {
     display: block;
 }
 
-section > .icon-box > i.fa {
+section>.icon-box>i.fa {
     color: rgb(131, 194, 184);
     font-size: 6em;
     margin-top: 10px;
     line-height: inherit;
 }
 
-section > .icon-box {
+section>.icon-box {
     margin: 20px auto 10px;
     width: 150px;
     height: 150px;
@@ -179,7 +181,6 @@ section > .icon-box {
     border-radius: 8em;
     text-align: center;
     line-height: 150px;
-
 }
 
 .button {
@@ -322,7 +323,6 @@ footer p {
     line-height: 1;
 }
 
-
 #footerLeft {
     float: left;
     width: 25%;
@@ -426,3 +426,59 @@ footer p {
 /* ORANGE
 color: #F36156;
 */
+
+/* +++++++++++ RESPONSIVE +++++++++++ */
+
+@media only screen and (max-width: 500px) {
+    header {
+        display: block;
+        height: auto;
+        line-height: 1.5;
+    }
+
+    #logo {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav {
+        display: block;
+        width: 100%;
+    }
+
+    #intro {
+        display: none;
+    }
+    .special > p {
+        width: 100%;
+    }
+    header > .social {
+        display: none;
+    }
+
+    section {
+        float: none;
+        width: auto;
+    }
+
+    section h3 {
+        text-align: center;
+    }
+    #footerLeft,
+    #footerMid,
+    #footerRight {
+        float: none;
+        width: 100%;
+        text-align: center;
+        padding: 2%;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.6em;
+    }
+}
