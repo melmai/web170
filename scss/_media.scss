@@ -1,0 +1,5 @@
+@mixin forLargeScreens($width) {
+    @media screen and (min-width: $width/16+em) {
+        @content;
+    }
+}

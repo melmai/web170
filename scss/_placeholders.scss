@@ -1,0 +1,32 @@
+$orange: #F36156;
+$green: rgb(131, 194, 184);
+$lightGreen: rgb(131, 209, 199);
+$white: #fff;
+$black: rgba(10, 10, 10, .8);
+
+%link {
+    text-decoration: none;
+    &:hover {
+        border-bottom: 1px dashed $green;
+        color: $green;
+    }
+}
+
+%menu {
+    list-style-type: none;
+    font-family: 'Raleway', sans-serif;
+    padding-left: 0;
+    li {
+        text-transform: uppercase;
+        text-align: center;
+        a {
+            display: block;
+            line-height: 1.5;
+            text-decoration: none;
+            color: $green;
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
+}

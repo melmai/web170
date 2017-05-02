@@ -1,0 +1,414 @@
+@import 'placeholders';
+@import 'typography';
+@import 'media';
+
+* {
+    margin: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+
+    &:not(:i.fa) {
+        @include forLargeScreens(900) {
+            font-size: 110%;
+        }
+    }
+}
+
+html {
+    @include forLargeScreens(640) {
+        background: url("../images/shoes-med.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}
+
+header {
+    position: relative;
+    padding: 1%;
+    width: 100%;
+    background: $black;
+    @include forLargeScreens(640) {
+        height: 100px;
+        padding-bottom: 0;
+
+    }
+
+    #mobile-menu button {
+        background: none;
+        border: none;
+        @include forLargeScreens(640) {
+            display: none;
+        }
+        position: absolute;
+        top: 8px;
+        left: 2%;
+        z-index: 2;
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    > a {
+        @include forLargeScreens(900) {
+            float: left;
+        }
+    }
+
+    #logo {
+        width: 200px;
+        display: block;
+        margin: 0 auto;
+        z-index: 1;
+        @include forLargeScreens(640) {
+            margin: 0 0 0 3%;
+        }
+        @include forLargeScreens(900) {
+            margin: auto 0 auto 5%;
+            height: 80px;
+            width: auto;
+            display: flex;
+        }
+    }
+
+    nav {
+        font-size: 1.2em;
+        @include forLargeScreens(640) {
+            display: block;
+        }
+        @include forLargeScreens(900) {
+            position: absolute;
+            width: 50%;
+            bottom: 0;
+            right: 0;
+        }
+        a {
+            display: block;
+        }
+
+        ul {
+            display: none;
+            @extend %menu;
+            @include forLargeScreens(640) {
+                display: flex;
+            }
+
+            > li {
+                @include forLargeScreens(640) {
+                    text-align: center;
+                    font-size: 1em;
+                    display: block;
+                    padding: 1.5%;
+                    width: 20%;
+                }
+                @include forLargeScreens(900) {
+                    float: left;
+                    margin-bottom: 0;
+                    &:nth-child(1), &:nth-child(3), &:nth-child(5) {
+                        width: 16%;
+                    }
+                    &:nth-child(2), &:nth-child(6) {
+                        width: 25%;
+                    }
+                }
+            }
+        }
+
+        ul#sub-menu {
+            margin-bottom: 1px;
+            display: none;
+            width: 100%;
+            @include forLargeScreens(640) {
+                background-color: #222;
+                position: absolute;
+                top: 100px;
+                left: 0;
+            }
+            @include forLargeScreens(900) {
+                width: 40%;
+                max-width: 200px;
+                top: 2em;
+                left: 20%;
+                margin-top: 2px;
+                padding: 10px 0 3% 10px;
+            }
+
+            > li {
+                margin: 0;
+                font-size: 0.8em;
+                text-transform: capitalize;
+                text-align: center;
+                @include forLargeScreens(640) {
+                    width: auto;
+                    float: left;
+                    margin-left: 2%;
+                }
+                @include forLargeScreens(900) {
+                    float: none;
+                    text-align: left;
+                    margin-left: 5%;
+                    line-height: 2.5em;
+                }
+                &:hover {
+                    color: $orange;
+                    background-color: #222;
+                    @include forLargeScreens(640) {
+                        background-color: none;
+                    }
+                }
+            }
+        }
+    }
+    > .social {
+        display: none;
+        @include forLargeScreens(640) {
+            display: inline;
+            position: absolute;
+            top: 10px;
+            right: 3%;
+        }
+        a {
+            color: $white;
+            &:hover {
+                color: $green;
+            }
+        }
+    }
+}
+
+
+
+section {
+    padding: 2%;
+    background-color: $white;
+    overflow: hidden;
+}
+
+main > section {
+    width: 100%;
+    margin-bottom: 10px;
+
+    > p {
+        max-width: 550px;
+        margin: 0 auto 1.5em;
+    }
+
+    &:first-of-type {
+        margin-top: 10px;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    @include forLargeScreens(640) {
+        width: 95%;
+        margin: auto;
+    }
+}
+
+.container {
+    margin-bottom: 20px;
+
+    > section {
+        @include forLargeScreens(1040) {
+            float: left;
+            width: 33%;
+        }
+        .icon-box {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            border: 1px solid $green;
+            border-radius: 50%;
+            text-align: center;
+            @include forLargeScreens(640) {
+                margin-right: 5%;
+                float: left;
+            }
+            @include forLargeScreens(1040) {
+                margin-right: auto;
+                float: none;
+            }
+        }
+
+        .content {
+            @include forLargeScreens(640) {
+                float: left;
+                width: 60%;
+            }
+            @include forLargeScreens(800) {
+                float: left;
+                width: 70%;
+            }
+            @include forLargeScreens(1040) {
+                display: block;
+                width: auto;
+            }
+        }
+    }
+    i.fa {
+        color: $green;
+        font-size: 6em;
+        margin-top: 25px;
+    }
+}
+
+.button {
+    width: 50%;
+    max-width: 200px;
+    margin: 10px auto 20px;
+    padding: 2%;
+    display: block;
+    color: $white;
+    background-color: $green;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    font-size: 1.1em;
+    line-height: 1.1em;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    @include forLargeScreens(640) {
+        margin-top: 20px;
+    }
+    @include forLargeScreens(900) {
+        width: 75%;
+        padding: 3% 2%;
+    }
+
+    &:hover {
+        background-color: $lightGreen;
+        box-shadow: 5px 5px 5px #ccc;
+        position: relative;
+        top: 2px;
+        left: 2px;
+    }
+}
+
+footer {
+    margin-top: 10px;
+    overflow: hidden;
+    padding: 2%;
+    background-color: $black;
+    color: $white;
+    width: 100%;
+    text-align: center;
+    @include forLargeScreens(640) {
+        padding: 3% 3%;
+    }
+    @include forLargeScreens(900) {
+        padding: 3% 10%;
+    }
+    @include forLargeScreens(1100) {
+        padding: 3% 15%;
+    }
+    @include forLargeScreens(1300) {
+        padding: 3% 18%;
+    }
+    > div.footer {
+        @include forLargeScreens(640) {
+            float: left;
+            width: 33%;
+        }
+    }
+
+    div {
+        margin-bottom: 20px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    ul {
+        @extend %menu;
+        li {
+            text-transform: capitalize;
+            a {
+                color: $white;
+                @extend %link;
+                max-width: 75px;
+                display: block;
+                margin: auto;
+                &:hover {
+                    font-weight: 800;
+                    color: $lightGreen;
+                }
+            }
+        }
+    }
+
+    a i.fa {
+        color: $white;
+
+        &:hover {
+            color: $green;
+        }
+        @include forLargeScreens(640) {
+            font-size: 2em;
+        }
+        @include forLargeScreens(840) {
+            font-size: 3em;
+        };
+    }
+}
+
+address {
+    p {
+        @extend p;
+        font-style: normal;
+        margin: 0;
+    }
+
+    a {
+        color: $white;
+        @extend %link;
+        &:hover {
+            color: $green;
+        }
+    }
+}
+
+.email {
+    label {
+        display: none;
+    }
+
+    input[type=email] {
+        padding: 1%;
+    }
+}
+
+input[type=submit] {
+    margin-left: 0.5%;
+    padding: 1%;
+    color: $white;
+    background-color: $green;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    font-size: 1.1em;
+    line-height: 1.1em;
+    text-transform: uppercase;
+
+    &.footer-button {
+        @include forLargeScreens(640) {
+            margin-top: 10px;
+        }
+        @include forLargeScreens(1100) {
+            margin-top: 0;
+        }
+    }
+}
+
+#copyright {
+    width: 100%;
+    clear: both;
+    margin-top: 10px;
+    text-align: center;
+    a {
+        @extend %link;
+        color: #fff;
+    }
+}

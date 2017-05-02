@@ -11,142 +11,164 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Raleway" rel="stylesheet">
     <!-- SITE STYLES -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- SITE JS/JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
 
     <header>
+        <div id="mobile-menu">
+            <button href="">
+                <img src="images/open.svg" id="open" />
+                <img src="images/close.svg" id="close" />
+            </button>
+        </div><!-- #mobile-nav -->
 
-        <div id="logo">
-            <a href=""><h1>Progressive Gym</h1></a>
-        </div>
-        <!-- #logo -->
+        <a href="">
+            <img src="images/pg-logo.svg" alt="Progressive Gym Logo" id="logo"/>
+        </a>
 
-        <nav class="nav">
-            <ul>
+        <nav>
+            <ul id="main-nav">
                 <li><a href="index.html">Home</a></li>
+                <li class="expand"><a href="services.html">Services</a></li>
+                    <ul id="sub-menu">
+                        <li><a href="">Personal Training</a></li>
+                        <li><a href="">Group Training</a></li>
+                        <li><a href="">Business Policies</a></li>
+                    </ul>
                 <li><a href="about.html">About</a></li>
-                <li><a href="train.html">Train</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
 
         <div class="social">
-            <ul>
-                <li><a href="https://www.yelp.com/biz/progressive-gym-seattle" target="_blank"><i class="fa fa-yelp fa-3x"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/david-lyman-57a749/" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a></li>
-                <li><a href="https://www.facebook.com/ProgressiveGym/" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a></li>
-            </ul>
+            <a href=""><i class="fa fa-facebook-square fa-2x"></i></a>
+            <a href=""><i class="fa fa-twitter-square fa-2x"></i></a>
+            <a href=""><i class="fa fa-linkedin-square fa-2x"></i></a>
+            <a href=""><i class="fa fa-instagram fa-2x"></i></a>
+            <a href=""><i class="fa fa-yelp fa-2x"></i></a>
         </div>
-        <!-- #social -->
+
+
 
     </header>
 
     <!-- ++++++++++ END HEADER ++++++++++ -->
+    <main>
+        <section class="container">
+            <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <img class="mySlides" src="images/slide1.svg">
+            <img class="mySlides" src="img_lights.jpg">
+            <img class="mySlides" src="img_mountains.jpg">
+            <img class="mySlides" src="img_forest.jpg">
+            <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+        </section>
 
-    <div id="intro">
-        <div class="banner">
-            <h2>Progressive Gym</h2>
-            <p class="cursive">your mobile personal trainer</p>
-        </div>
-        <!--  .banner -->
-    </div>
-    <!-- #intro -->
+        <section class="container">
+            <h1>Why Mobile Personal Training?</h1>
+            <p>With Progressive Gym, the world is your gym! We can train you at your home, your business, or public spaces. We will bring the gym to you! </p>
 
-    <div class="special">
-        <h2>Introductory Offer</h2>
-        <p class="promo">50% Off First Session!</p>
-        <a href="contact.php" class="button" id="standard-size">Get Started</a>
-    </div>
-    <!-- .special -->
+            <p>Our mission: To transform your body and your approach to fitness.</p>
+        </section>
 
-    <div class="special">
-        <h2>Why mobile personal training?</h2>
-        <p>With Progressive Gym, the world is your gym! We can train you at your home, your business, or public spaces. We will bring the gym to you! </p>
+        <section class="container">
+            <h1>How To Get Started</h1>
+            <section>
+                <div class="icon-box">
+                    <i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
+                </div> <!-- .icon-box -->
+                <div class="content">
+                    <h2 class="icon-box-labels">Step 1: Location</h2>
+                    <p>With Progressive Gym, the world is your gym! We can train you at your home, your business, or in public spaces. We will bring the gym to you!</p>
+                    <a href="" class="button">See Locations</a>
+                </div><!-- .content -->
 
-        <p><b>Our mission</b>: To transform your body and your approach to fitness.</p>
-    </div>
-    <!-- .special -->
+            </section>
 
-    <div class="special">
-        <h2>How to get started</h2>
         <section>
             <div class="icon-box">
-            <i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
-        </div>
-            <h3>Step 1: Location</h3>
-
-            <p>With Progressive Gym, the world is your gym! We can train you at your home, your business, or in public spaces. We will bring the gym to you!</p>
-            <a href="" class="button">See Locations</a>
+                <i class="fa fa-users fa-3x" aria-hidden="true"></i>
+            </div> <!-- .icon-box -->
+            <div class="content">
+                <h2 class="icon-box-labels">Step 2: Select Style</h2>
+                <p>Whether you're looking for one-on-one sessions or corporate events, we accomodate groups of all sizes. We provide training on fundamental office ergonomics and pilates to bootcamp classes if that's what you prefer!</p>
+                <a href="" class="button">See Styles</a>
+            </div><!-- .content -->
         </section>
+
         <section>
             <div class="icon-box">
-            <i class="fa fa-users" aria-hidden="true"></i>
-        </div>
-            <h3>Step 2: Select Style</h3>
-
-            <p>Whether you're looking for one-on-one sessions or corporate events, we accomodate groups of all sizes. We provide training on fundamental office ergonomics and pilates to bootcamp classes if that's what you prefer!</p>
-            <a href="" class="button">See Styles</a>
+                <i class="fa fa-pencil-square-o fa-3x" aria-hidden="true"></i>
+            </div><!-- .icon-box -->
+            <div class="content">
+                <h2 class="icon-box-labels">Step 3: Schedule</h2>
+                <p>Contact us to get your first session started! We travel within the greater Seattle area to fit your needs.</p>
+                <a href="" class="button">Contact</a>
+            </div><!-- .content -->
         </section>
-        <section>
-            <div class="icon-box">
-            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-        </div>
-            <h3>Step 3: Schedule</h3>
-
-            <p>Contact us to get your first session started! We travel within the greater Seattle area to fit your needs.</p>
-            <a href="" class="button">Contact</a>
-        </section>
-    </div>
-
+    </section>
+</main>
     <!-- ++++++++++ FOOTER ++++++++++ -->
     <footer>
-        <div id="footerLeft" class="nav">
-            <h4>Sitemap</h4>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="train.html">Train</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <!-- #footerLeft -->
-
-        <div id="footerMid">
+        <div class="footer promo">
             <div class="social">
-                <h4>Social</h4>
-                <a href=""><i class="fa fa-facebook-square fa-2x"></i></a>
-                <a href=""><i class="fa fa-twitter-square fa-2x"></i></a>
-                <a href=""><i class="fa fa-linkedin-square fa-2x"></i></a>
-                <a href=""><i class="fa fa-instagram fa-2x"></i></a>
-                <a href=""><i class="fa fa-yelp fa-2x"></i></a>
+                <p class="footer-heading">Social</p>
+                <a href=""><i class="fa fa-facebook-square fa-3x"></i></a>
+                <a href=""><i class="fa fa-twitter-square fa-3x"></i></a>
+                <a href=""><i class="fa fa-linkedin-square fa-3x"></i></a>
+                <a href=""><i class="fa fa-instagram fa-3x"></i></a>
+                <a href=""><i class="fa fa-yelp fa-3x"></i></a>
             </div>
-            <!-- #social -->
+            <!-- .social -->
 
             <div class="email">
                 <form>
-                    <h4>Mailing List</h4>
+                    <p class="footer-heading">Mailing List</p>
                     <label for="email">Email</label>
                     <input type="email" id="email" placeholder="Email Address">
-                    <input type="submit">
+                    <input type="submit" class="footer-button">
                 </form>
             </div>
             <!-- .email -->
         </div>
-        <!-- #footerMid -->
+        <!-- .promo -->
 
-        <div id="footerRight">
-            <h4>Contact</h4>
-            <p>Progressive Gym, LLC</p>
-            <p>David Lyman, CPT</p>
-            <p>1234 Business Address</p>
-            <p><a href="mailto:david@progressivegym.com">david@progressivegym.com</a></p>
-            <p>206.123.4567</p>
+        <div class="footer nav">
+            <nav>
+                <p class="footer-heading">Sitemap</p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <!-- #footerRight -->
+        <!-- .footer nav -->
+
+
+
+        <div class="footer contact">
+            <p class="footer-heading">Contact</p>
+            <address>
+                <p>Progressive Gym, LLC</p>
+                <p>David Lyman, CPT</p>
+                <p>1234 Business Address</p>
+                <p><a href="mailto:david@progressivegym.com">david@progressivegym.com</a></p>
+                <p>206.123.4567</p>
+            </address>
+        </div>
+        <!-- .footer contact -->
+
+        <div id="copyright">
+            <small>&copy;Progressive Gym, LLC 2017 | All Rights Reserved | Web Design by <a href="http://mel.codes" target="_blank">Melissa Wong</small>
+        </div>
     </footer>
 </body>
 
