@@ -16,7 +16,7 @@
                 <p class="footer-heading">Mailing List</p>
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="Email Address">
-                <input type="submit" class="footer-button">
+                <input type="submit" class="footer-button" value="Subscribe">
             </form>
         </div>
         <!-- .email -->
@@ -24,8 +24,20 @@
     <!-- .promo -->
 
     <div class="footer nav">
+        <p class="footer-heading">Sitemap</p>
+
+    <!-- begin dynamic footer nav -->
+    <?php
+        wp_nav_menu(array(
+            'theme_location' => 'footer-menu',
+            'container' => 'nav',
+            'menu_class' => 'footer nav'
+        ));
+    ?>
+    <!-- end dynamic footer nav -->
+
+    <!-- begin static footer nav
         <nav>
-            <p class="footer-heading">Sitemap</p>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -34,6 +46,8 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+    end static footer nav -->
+
     </div>
     <!-- .footer nav -->
 
