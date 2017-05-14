@@ -141,7 +141,8 @@ nav {
     height: 35px; }
 
 #main-nav {
-  display: none; }
+  display: none;
+  width: 100%; }
   @media screen and (min-width: 40em) {
     #main-nav {
       display: flex; } }

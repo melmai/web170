@@ -1,6 +1,7 @@
 $(function() {
     var $nav = $('#main-nav');
-    var $subMenu = $('#sub-menu');
+    var $subMenu = $('.sub-menu');
+    var $itemExpand = $('#menu-item-38');
 
     //hide navigation menus
     $('#close').hide();
@@ -18,19 +19,20 @@ $(function() {
     });
 
     //when .expand clicked...
-    $('.expand').on('click', function() {
+    $itemExpand.on('click', function() {
         //toggle #sub-menu
         $subMenu.slideToggle();
         return false;
     });
 
     if (window.innerWidth > 640) {
-        $('.expand').on('mouseenter', function() {
+        $itemExpand.on('mouseenter', function() {
             $subMenu.slideDown();
             return false;
-        })
-        $nav.on('mouseleave', function(){
-            $subMenu.slideUp();
-        })
-    }
+        });
+        $subMenu.on('mouseleave', function(){
+            $subMenu.slideUp('slow');
+            return false;
+        });
+    };
 });

@@ -111,6 +111,7 @@ nav {
 
 #main-nav {
     display: none;
+    width: 100%;
     @extend %menu;
     @include forLargeScreens(640) {
         display: flex;
