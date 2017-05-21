@@ -4,6 +4,7 @@
     
     <main class="page">
         <section class="container">
+        	<?php the_post_thumbnail('medium_large'); ?>
             <h1><?php the_title(); ?></h1>
             <?php the_content(); ?>
 

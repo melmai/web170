@@ -20,4 +20,7 @@ register_sidebar(array(
 	'id' => 'sidebar',
 ));
 
+//Add support for post thumbnails and featured imgs
+add_theme_support('post-thumbnails');
+
 ?>
