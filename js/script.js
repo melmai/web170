@@ -22,12 +22,12 @@ $(function() {
          //when #menu-item-38 clicked...
         $itemExpand.on('click', function() {
             //toggle #sub-menu
-            $subMenu.slideToggle();
+            $subMenu.slideToggle('slow');
             return false;
-        }); 
+        });
     }
 
-   
+
 
     if (window.innerWidth > 640) {
         $itemExpand.on('mouseenter', function() {

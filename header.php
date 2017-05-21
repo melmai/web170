@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Comfortaa|Raleway" rel="stylesheet">
 
     <!-- SITE STYLES -->
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/reset.css">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
     <!-- SITE JS/JQUERY -->

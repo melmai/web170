@@ -60,16 +60,10 @@ p, address p {
   margin: 0;
   font-size: 100%;
   box-sizing: border-box; }
-  @media screen and (min-width: 56.25em) {
-    *:not(:i.fa) {
-      font-size: 110%; } }
 
 @media screen and (min-width: 40em) {
   html {
     background: url("../images/shoes-med.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover; } }
 
 header {
@@ -201,7 +195,7 @@ nav {
       background-color: #222; }
       @media screen and (min-width: 40em) {
         #sub-menu > li:hover {
-          background-color: none; } }
+          background: none; } }
 
 section {
   padding: 2%;
@@ -260,35 +254,6 @@ main > section {
     color: #83c2b8;
     font-size: 6em;
     margin-top: 25px; }
-
-.button {
-  width: 50%;
-  max-width: 200px;
-  margin: 10px auto 20px;
-  padding: 2%;
-  display: block;
-  color: #fff;
-  background-color: #83c2b8;
-  font-family: 'Comfortaa', cursive;
-  font-weight: bold;
-  font-size: 1.1em;
-  line-height: 1.1em;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none; }
-  @media screen and (min-width: 40em) {
-    .button {
-      margin-top: 20px; } }
-  @media screen and (min-width: 56.25em) {
-    .button {
-      width: 75%;
-      padding: 3% 2%; } }
-  .button:hover {
-    background-color: #83d1c7;
-    box-shadow: 5px 5px 5px #ccc;
-    position: relative;
-    top: 2px;
-    left: 2px; }
 
 footer {
   margin-top: 10px;
@@ -376,5 +341,35 @@ input[type=submit] {
   text-align: center; }
   #copyright a {
     color: #fff; }
+
+a.button {
+  width: 50%;
+  max-width: 200px;
+  margin: 10px auto 20px;
+  padding: 2%;
+  display: block;
+  color: #fff;
+  background-color: #83c2b8;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  font-size: 1.1em;
+  line-height: 1.1em;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none; }
+  @media screen and (min-width: 40em) {
+    a.button {
+      margin-top: 20px; } }
+  @media screen and (min-width: 56.25em) {
+    a.button {
+      width: 75%;
+      padding: 3% 2%; } }
+  a.button:hover {
+    background-color: #83d1c7;
+    box-shadow: 5px 5px 5px #ccc;
+    position: relative;
+    top: 2px;
+    left: 2px; }
+
 
 /*# sourceMappingURL=main.css.map */
