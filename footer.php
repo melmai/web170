@@ -12,12 +12,9 @@
         <!-- .social -->
 
         <div class="email">
-            <form>
-                <p class="footer-heading">Mailing List</p>
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Email Address">
-                <input type="submit" class="footer-button" value="Subscribe">
-            </form>
+            <p class="footer-heading">Mailing List</p>
+            <?php echo do_shortcode('[mc4wp_form id="153"]'); ?>
+
         </div>
         <!-- .email -->
     </div>

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main>
+<main id="front-page">
         <!--
         <section class="container">
             <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
@@ -18,15 +18,8 @@
             <?php endwhile; endif; ?>
         </section>
 
-        <section class="container">
-            <h2>Why Mobile Personal Training?</h2>
-            <p>With Progressive Gym, the world is your gym! We can train you at your home, your business, or public spaces. We will bring the gym to you! </p>
-
-            <p>Our mission: To transform your body and your approach to fitness.</p>
-        </section>
-
-        <section class="container">
-            <h2>How To Get Started</h2>
+        <section class="container" id="container-3">
+            <h2 class="home-title">How To Get Started</h2>
             <section>
                 <div class="icon-box">
                     <i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
@@ -62,13 +55,15 @@
         </section>
     </section>
 
-    <section class="container">
-        <h2>Latest Blog Posts</h2>
+    <section id="blog-feed"class="container">
+        <h2 class="home-title">Latest Blog Posts</h2>
         <ul>
             <?php rewind_posts(); ?>
             <?php query_posts('showposts=3'); // ?>
             <?php while (have_posts()) : the_post(); ?>
-                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                <li>
+                    <a href="<?php the_permalink(); ?>" class="blog-title"><?php the_time('d M Y');?> || <?php the_title(); ?></a><?php the_excerpt(); ?>
+                </li>
             <?php endwhile; // end loop two ?>
         </ul>
     </section>

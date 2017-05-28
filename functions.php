@@ -20,7 +20,18 @@ register_sidebar(array(
 	'id' => 'sidebar',
 ));
 
+register_sidebars(3, array(
+    'before_widget' => '<div id="%1$s">',
+    'after_widget' => '</div>'
+));
+
 //Add support for post thumbnails and featured imgs
 add_theme_support('post-thumbnails');
+
+//edit the excerpt
+function custom_excerpt_more( $more ) {
+	return '.....';
+}
+add_filter( 'excerpt_more', 'custom_excerpt_more' );
 
 ?>

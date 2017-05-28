@@ -28,41 +28,56 @@ footer ul li a, address a, #copyright a {
         color: #F36156; }
 
 h1, h2, h3, h4 {
-  margin: 1.314em 0 .5em;
+  margin: .5em 0 .25em;
   line-height: 1.45; }
 
 h1 {
+margin-top: 0;
   text-align: center;
-  font-family: 'Comfortaa', cursive;
-  font-size: 2.3em;
+  font-family: 'Francois One', sans-serif;
+  font-size: 2.8em;
+  text-transform: uppercase;
   }
 
-h1.blog-title {
-    font-family: 'Pacifico', cursive;
-    font-size: 2.3em;
-    margin-bottom: .25em;
+  h2 {
     text-align: left;
+    font-family: 'Francois One', sans-serif;
+    font-size: 2.069em; }
+
+h2.blog-title {
+    font-size: 2.5em;
+    margin-bottom: .25em;
+    margin-top: 0;
 }
 
-h2 {
-  text-align: center;
-  font-family: 'Pacifico', cursive;
-  font-size: 1.969em; }
-  h2.icon-box-labels {
-    margin-top: .5em; }
+h2.blog-feed-title {
+    margin: 0;
+}
+
+h2.home-title {
+    text-align: center;
+    margin-top: 0;
+}
+
 
 h3 {
   font-size: 1.677em;
-  font-family: 'Comfortaa', sans-serif;
+  font-family: 'Pacifico', cursive;
   text-align: center;}
+
+h3#reply-title {
+    text-align: left;
+}
+
 
 h4 {
   font-size: 1.433em; }
 
 blockquote {
     font-size: 1.15em;
+    font-style: italic;
     max-width: 600px;
-    margin: 0 auto 5% auto;
+    margin: 0 0 5% 10%;
     border-left: 3px solid #ccc;
     padding-left: 2%;
     color: #999;
@@ -89,6 +104,26 @@ p.wp-caption-text {
     font-size: .8em;
 }
 
+p.logged-in-as {
+    font-size: .9em;
+}
+
+.comment-form-comment > label {
+    display: block;
+    margin: 0;
+    margin-top: 10px;
+}
+a.blog-title {
+    font-family: 'Francois One', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#wrapper {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+}
 * {
   margin: 0;
   font-size: 100%;
@@ -184,6 +219,7 @@ header nav {
   @media screen and (min-width: 56.25em) {
     #main-nav {
       position: relative;
+      max-width: 700px;
       height: 50px;
     }
     #main-nav > li {
@@ -229,8 +265,7 @@ header nav {
         margin-left: 5%;
         line-height: 2.5em; } }
     .sub-menu > li:hover {
-      color: #F36156;
-      background-color: #222; }
+      color: #F36156; }
       @media screen and (min-width: 40em) {
         .sub-menu > li:hover {
           background: none; } }
@@ -240,18 +275,35 @@ section {
   background-color: #fff;
   overflow: hidden; }
 
+
+#front-page {
+    margin: auto;
+    max-width: 1200px;
+}
+
+#front-page > .container > p {
+    margin: 10px auto 0;
+}
+
+  @media screen and (min-width: 40em) {
+      main {
+         max-width: 1200px;
+      }
+  }
+
 main > section {
   width: 100%;
   margin-bottom: 10px; }
   main > section > p {
     max-width: 650px;
-    margin: 0 auto 1.5em; }
+    margin-bottom: 10px;
+    margin: 15px;}
   main > section:first-of-type {
     margin-top: 10px; }
-  main > section:last-of-type {
-    margin-bottom: 0; }
+
   @media screen and (min-width: 40em) {
     main > section {
+      padding: 5%;
       width: 95%;
       margin: auto; } }
 
@@ -259,7 +311,7 @@ main ul, main ol {
     font-family: 'Raleway', sans-serif;
     line-height: 1;
     margin: 15px auto;
-    max-width: 650px;
+    max-width: 550px;
 }
 
 main ul li, main ol li {
@@ -297,14 +349,42 @@ main a:hover {
     font-weight: bold;
 }
 
+#page-content {
+    max-width: 550px;
+    margin: auto;
+}
+
+#page-content > h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#page-content > h3 {
+    font-family: 'Comfortaa', cursive;
+    text-align: left;
+    font-size: 1.133em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+#page-content > p {
+    margin-bottom: 20px;
+}
+
+#page-content > ul {
+    margin-left: 0;
+    margin-top: 5px;
+}
+
 .container {
   display: block;
   width: 95%;
+  max-width:1000px;
   margin-bottom: 20px; }
   @media screen and (min-width: 65em) {
     .container > section {
       float: left;
-      width: 33%; } }
+      width: 33.333%; } }
   .container > section .icon-box {
     width: 150px;
     height: 150px;
@@ -337,25 +417,63 @@ main a:hover {
     font-size: 6em;
     margin-top: 25px; }
 
+
+#blog-feed li {
+    margin-bottom: 15px;
+}
+
 aside {
   width: 95%;
+  padding: 0 4% 10px;
   background: #fff;
   margin: auto;
 
 }
   @media screen and (min-width: 40em) {
     aside {
-      width: 27%;
+      width: 24%;
       margin: 10px 2% 10px 0;
       float: right;
     }
     main.page {
-      width: 70%;
+      width: 74%;
       float: left;
+    }
+
+    #sub-navigation h3 {
+        margin-top: 15px;
     }
   }
 
 
+label {
+    margin-bottom: 10px;
+}
+aside a {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.3em;
+    text-decoration: none;
+}
+
+.cat-item a {
+    color: #F36156;
+}
+
+aside a:active, aside a:hover, .cat-item a:active, .cat-item a:hover {
+    color: #F36156;
+    border-bottom: 1px dashed #83c2b8;
+}
+aside a:visited, cat-item a:visited {
+    color: #83c2b8;
+}
+
+#contact-aside > address > p {
+    font-size: .9em;
+}
+
+#contact-aside a {
+    color: #83c2b8;
+}
 
 footer {
   margin-top: 10px;
@@ -446,10 +564,43 @@ input[type=submit] {
   #copyright a {
     color: #fff; }
 
+
+.wp-post-image {
+    display: none;
+}
+
+@media screen and (max-width: 40em) {
+    aside {
+        display: none;
+    }
+}
+@media screen and (min-width: 40em) {
+
+    .wp-post-image {
+        display: block;
+        margin: auto;
+    }
+    .flexbox {
+        display: flex;
+        margin-top: 10px;
+    }
+    .flex-element {
+        display:inline;
+    }
+
+    .margin-left {
+        margin-left: 2%;
+    }
+}
+
+
 .alignleft {
     float: left;
-    margin-left: 20%;
     margin-right: 2%;
+}
+
+.aligncenter {
+    margin: 10px auto;
 }
 
 .blog-post-header {

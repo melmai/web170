@@ -10,7 +10,7 @@
     <script src="https://use.fontawesome.com/a8b458af26.js"></script>
 
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Pacifico|Comfortaa|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Comfortaa|Raleway|Francois+One" rel="stylesheet">
 
     <!-- SITE STYLES -->
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/reset.css">
@@ -35,7 +35,7 @@
             </button>
         </div><!-- #mobile-menu -->
 
-        <a href="">
+        <a href="http://www.progressivegym.com">
             <img src="<?php bloginfo('template_directory'); ?>/images/pg-logo.svg" alt="Progressive Gym Logo" id="logo"/>
         </a>
 

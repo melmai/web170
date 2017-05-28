@@ -38,5 +38,6 @@ $(function() {
             $subMenu.slideUp('slow');
             return false;
         });
+        $nav.show();
     };
 });
