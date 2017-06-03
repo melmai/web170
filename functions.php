@@ -14,19 +14,22 @@ register_nav_menus(array(
     'footer-menu' => __('Footer Menu')
 ));
 
-//Register Sidebar
-register_sidebar(array(
-	'name' => 'aside',
-	'id' => 'sidebar',
-));
+//Register sidebars
+function progressive_widgets_init() {
+    register_sidebars(3, array(
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title'  => '<h3 class="widgettitle">',
+        'after_title'   => '</h2>'
+    ));
+}
 
-register_sidebars(3, array(
-    'before_widget' => '<div id="%1$s">',
-    'after_widget' => '</div>'
-));
+add_action( 'widgets_init', 'progressive_widgets_init' );
+
 
 //Add support for post thumbnails and featured imgs
 add_theme_support('post-thumbnails');
+add_image_size('featured', 650, 300, true);
 
 //edit the excerpt
 function custom_excerpt_more( $more ) {

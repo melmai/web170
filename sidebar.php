@@ -13,7 +13,7 @@
 			        	'title_li' => __('')
 			        	)
 			        );
-			    } else if (is_page(34)){
+			    } else if (is_page([34,23])){
 					echo '
 					<div id="contact-aside">
 					<address>
@@ -38,19 +38,15 @@
 	    </ul>
 	    <?php endif; ?>
 	    <?php if (!(is_page())) : // if this is a POST ?>
-	    <h3>Categories</h3>
-	    <ul>
-	    	<?php wp_list_categories(array(
-	    		'title_li' => __('')
-	    		)
-	    	);?>
-	  	</ul>
+	   <?php dynamic_sidebar(2); ?>
+
 	    <?php endif; ?>
 
 	</div> <!-- #sub-navigation -->
 
 	<div id="quotes">
 		<?php if(get_post_meta($post->ID, 'quote', true)) : ?>
+			<h3>Quote</h3>
 			<blockquote>
 				<?php echo get_post_meta($post->ID, 'quote', true); ?>
 			</blockquote>
