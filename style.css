@@ -69,7 +69,10 @@ h3#reply-title {
     text-align: left;
 }
 
-
+aside h3 {
+    text-align: left;
+    margin-bottom: 0;
+}
 h4 {
   font-size: 1.433em; }
 
@@ -113,10 +116,15 @@ p.logged-in-as {
     margin: 0;
     margin-top: 10px;
 }
+
+a {
+    color: #83c2b8;
+}
 a.blog-title {
     font-family: 'Francois One', sans-serif;
     font-size: 1.2em;
     margin-bottom: 20px;
+    color: #83c2b8;
 }
 
 #wrapper {
@@ -205,6 +213,10 @@ header nav {
 #main-nav {
   display: none;
   margin-bottom: 0; }
+
+ #main-nav > li {
+     font-size: 1.5em;
+ }
   @media screen and (min-width: 40em) {
     #main-nav {
       display: flex;
@@ -331,6 +343,7 @@ main a:visited {
 main h2 a {
     border-bottom: none;
     text-decoration: underline;
+    color: #83c2b8;
 }
 
 main h2 a:visited {
@@ -417,34 +430,61 @@ main a:hover {
     font-size: 6em;
     margin-top: 25px; }
 
-
+#featured-img {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
 #blog-feed li {
     margin-bottom: 15px;
 }
 
+#blog-feed > ul > li > p {
+    margin-top: 5px;
+}
+
+#wpcf7-f151-p34-o1 {
+    max-width: 350px;
+    margin: auto;
+}
+
+#wpcf7-f151-p34-o1 p {
+    margin-bottom: 10px;
+}
+
 aside {
-  width: 95%;
   padding: 0 4% 10px;
   background: #fff;
-  margin: auto;
 
+}
+
+@media screen and (max-width: 40em) {
+    aside {
+        display: none;
+    }
 }
   @media screen and (min-width: 40em) {
     aside {
-      width: 24%;
+      width: 31%;
       margin: 10px 2% 10px 0;
       float: right;
     }
     main.page {
-      width: 74%;
+      width: 66%;
       float: left;
+    }
+}
+@media screen and (min-width: 56.25em) {
+    aside {
+      width: 24%;
+    }
+    main.page {
+      width: 74%;
     }
 
     #sub-navigation h3 {
         margin-top: 15px;
     }
   }
-
 
 label {
     margin-bottom: 10px;
@@ -540,7 +580,6 @@ address a {
   padding: 1%; }
 
 input[type=submit] {
-  margin-left: 0.5%;
   padding: 1%;
   color: #fff;
   background-color: #83c2b8;
@@ -549,12 +588,19 @@ input[type=submit] {
   font-size: 1.1em;
   line-height: 1.1em;
   text-transform: uppercase; }
+    input[type=submit].footer-button {
+        margin-top: 5px;
+        padding-top: 2%;
+        font-size: 1em;
+    }
+    /*
   @media screen and (min-width: 40em) {
     input[type=submit].footer-button {
-      margin-top: 10px; } }
+      margin-top: 0; } }
   @media screen and (min-width: 68.75em) {
     input[type=submit].footer-button {
       margin-top: 0; } }
+*/
 
 #copyright {
   width: 100%;
@@ -569,10 +615,10 @@ input[type=submit] {
     display: none;
 }
 
-@media screen and (max-width: 40em) {
-    aside {
-        display: none;
-    }
+
+
+.flexbox {
+    margin-top: 10px;
 }
 @media screen and (min-width: 40em) {
 
@@ -582,7 +628,6 @@ input[type=submit] {
     }
     .flexbox {
         display: flex;
-        margin-top: 10px;
     }
     .flex-element {
         display:inline;
@@ -597,6 +642,14 @@ input[type=submit] {
 .alignleft {
     float: left;
     margin-right: 2%;
+}
+
+@media screen and (max-width: 40em) {
+    div.alignleft {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+    }
 }
 
 .aligncenter {
@@ -642,14 +695,14 @@ a.button {
   width: 50%;
   max-width: 200px;
   margin: 10px auto 20px;
-  padding: 2%;
+  padding: 3% 2% 2%;
   display: block;
   color: #fff !important;
   background-color: #83c2b8;
   font-family: 'Comfortaa', cursive;
   font-weight: bold;
   font-size: 1.1em;
-  line-height: 1.1em;
+  line-height: 1.2em;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none; }

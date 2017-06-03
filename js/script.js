@@ -22,9 +22,9 @@ $(function() {
          //when #menu-item-38 clicked...
         $itemExpand.on('click', function() {
             //toggle #sub-menu
-            $subMenu.slideToggle('slow');
+            $subMenu.slideToggle();
             return false;
-        });
+        })
     }
 
 

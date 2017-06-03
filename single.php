@@ -8,9 +8,12 @@ if(have_posts()) : while(have_posts()) : the_post();
                 <div id="page-content">
                     <div class="blog-post-header">
         	            <h2 class="blog-title"><?php the_title(); ?></h2>
-        	            <small class="blog-date">Published by <?php the_author(); ?> on <?php the_time('F jS, Y'); ?> in <?php the_category(', '); ?></small>
+        	            <small class="blog-date">Published by <?php the_author(); ?> on <?php the_time('F jS, Y'); ?>
+                         in <?php the_category(', '); ?></small>
         	        </div> <!-- .blog-post-header -->
-
+                    <div id="featured-img">
+                        <?php the_post_thumbnail('featured'); ?>
+                    </div>
         	        <?php the_content(); ?>
                     <?php comments_template(); ?>
 

@@ -25,8 +25,8 @@
                     <i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
                 </div> <!-- .icon-box -->
                 <div class="content">
-                    <h3 class="icon-box-labels">Step 1: Location</h3>
-                    <p>With Progressive Gym, the world is your gym! We can train you at your home, your business, or in public spaces. We will bring the gym to you!</p>
+                    <h3 class="icon-box-labels">Step 1: Mobile Location</h3>
+                    <p>We can train you at your home, your business, or in public spaces. We will bring the gym to you! With Progressive Gym, the world is your gym! </p>
                     <a href="locations.html" class="button">See Locations</a>
                 </div><!-- .content -->
 
