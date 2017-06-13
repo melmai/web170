@@ -2,9 +2,10 @@
 <html>
 
 <head>
-    <title><?php bloginfo('description'); ?> | <?php bloginfo('name'); ?></title>
+    <title><?php get_my_title_tag(); ?></title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<?php echo strip_tags(get_the_excerpt()); ?>" />
 
     <!-- FONT AWESOME -->
     <script src="https://use.fontawesome.com/a8b458af26.js"></script>

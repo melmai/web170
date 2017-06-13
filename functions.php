@@ -37,4 +37,52 @@ function custom_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'custom_excerpt_more' );
 
+// Get image attachments and display as flexslider
+function get_flexslider_gallery() {
+    global $post;
+    $attachments = get_children(array(
+        'post_parent' => $post->ID, //get children of current page being accessed
+        'post_type' => 'attachment', //get attachments for current page
+        'post_mime_type' => 'image', //get attachments with type = image
+        'order' => 'ASC', //ascending order
+        'orderby' => 'menu_order', //order by menu order, how it is placed in editor
+
+    ));
+    if ($attachments) {
+        echo '<div class="flexslider"><ul class="slides">';
+        foreach ($attachments as $attachment) {
+            echo '<li id="slide-' . $attachment->ID . '">';
+            echo wp_get_attachment_image($attachment->ID, 'large');
+            echo '</li>';
+        }
+        echo '</ul></div>';
+    }
+}
+
+// SEO Title Tag
+function get_my_title_tag() {
+    global $post;
+
+    // If on page or single post...
+    if (is_page() || is_single()) {
+        the_title();
+    // Otherwise...
+    } else {
+        bloginfo('description');
+    }
+
+    if ($post -> post_parent) {
+        echo ' | ';
+        echo get_the_title($post -> post_parent);
+    }
+
+    echo ' | ';
+    bloginfo('name');
+    echo ' | ';
+    echo 'Seattle, WA.';
+}
+
+//Add support for page excerpts
+add_post_type_support('page', 'excerpt');
+
 ?>
